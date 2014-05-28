@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
 @class LocationItemsFlipsideViewController;
 
@@ -14,7 +15,7 @@
 - (void)flipsideViewControllerDidFinish:(LocationItemsFlipsideViewController *)controller;
 @end
 
-@interface LocationItemsFlipsideViewController : UIViewController
+@interface LocationItemsFlipsideViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,CLLocationManagerDelegate>
 
 @property (weak, nonatomic) id <LocationItemsFlipsideViewControllerDelegate> delegate;
 

@@ -10,4 +10,7 @@
 
 @interface LocationItemsWebViewController : UIViewController
 
+@property NSNumber *majorNumber;
+@property NSNumber *minorNumber;
+
 @end

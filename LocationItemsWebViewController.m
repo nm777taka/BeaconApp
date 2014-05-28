@@ -9,6 +9,9 @@
 #import "LocationItemsWebViewController.h"
 
 @interface LocationItemsWebViewController ()
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UILabel *label;
 
 @end
 
@@ -23,10 +26,24 @@
     return self;
 }
 
+#pragma  mark - ViewLifeCylcle
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+//    NSString *urlString = [NSString stringWithFormat:@"http://newtonworks.sakura.ne.jp/wp/LocationItems/%02d-%02d",[self.majorNumber intValue],[self.minorNumber intValue]];
+//    
+//    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlString]]];
+    
+    //imageViewに画像を表示する
+    self.imageView.image = [UIImage imageNamed:@"Nana-Mizuki-LINKAGE-lyrics.jpg"];
+    self.label.text = @"会いたかったよ！";
+    
+    
 }
 
 - (void)didReceiveMemoryWarning

@@ -22,6 +22,9 @@
 		27CFC738192F81F300265B92 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27CFC717192F81F300265B92 /* UIKit.framework */; };
 		27CFC740192F81F300265B92 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27CFC73E192F81F300265B92 /* InfoPlist.strings */; };
 		27CFC742192F81F300265B92 /* LocationItemsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CFC741192F81F300265B92 /* LocationItemsTests.m */; };
+		27CFC74D192F82F500265B92 /* LocationItemsWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27CFC74C192F82F500265B92 /* LocationItemsWebViewController.m */; };
+		27CFC74F192F8A2F00265B92 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27CFC74E192F8A2F00265B92 /* CoreLocation.framework */; };
+		27CFC751192FA30F00265B92 /* Nana-Mizuki-LINKAGE-lyrics.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 27CFC750192FA30F00265B92 /* Nana-Mizuki-LINKAGE-lyrics.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,10 @@
 		27CFC73D192F81F300265B92 /* LocationItemsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LocationItemsTests-Info.plist"; sourceTree = "<group>"; };
 		27CFC73F192F81F300265B92 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		27CFC741192F81F300265B92 /* LocationItemsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationItemsTests.m; sourceTree = "<group>"; };
+		27CFC74B192F82F500265B92 /* LocationItemsWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationItemsWebViewController.h; sourceTree = SOURCE_ROOT; };
+		27CFC74C192F82F500265B92 /* LocationItemsWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationItemsWebViewController.m; sourceTree = SOURCE_ROOT; };
+		27CFC74E192F8A2F00265B92 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		27CFC750192FA30F00265B92 /* Nana-Mizuki-LINKAGE-lyrics.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Nana-Mizuki-LINKAGE-lyrics.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27CFC74F192F8A2F00265B92 /* CoreLocation.framework in Frameworks */,
 				27CFC716192F81F300265B92 /* CoreGraphics.framework in Frameworks */,
 				27CFC718192F81F300265B92 /* UIKit.framework in Frameworks */,
 				27CFC714192F81F300265B92 /* Foundation.framework in Frameworks */,
@@ -85,6 +93,7 @@
 		27CFC707192F81F200265B92 = {
 			isa = PBXGroup;
 			children = (
+				27CFC752192FA31700265B92 /* Images */,
 				27CFC719192F81F300265B92 /* LocationItems */,
 				27CFC73B192F81F300265B92 /* LocationItemsTests */,
 				27CFC712192F81F300265B92 /* Frameworks */,
@@ -104,6 +113,7 @@
 		27CFC712192F81F300265B92 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				27CFC74E192F8A2F00265B92 /* CoreLocation.framework */,
 				27CFC713192F81F300265B92 /* Foundation.framework */,
 				27CFC715192F81F300265B92 /* CoreGraphics.framework */,
 				27CFC717192F81F300265B92 /* UIKit.framework */,
@@ -122,6 +132,8 @@
 				27CFC729192F81F300265B92 /* LocationItemsMainViewController.m */,
 				27CFC72B192F81F300265B92 /* LocationItemsFlipsideViewController.h */,
 				27CFC72C192F81F300265B92 /* LocationItemsFlipsideViewController.m */,
+				27CFC74B192F82F500265B92 /* LocationItemsWebViewController.h */,
+				27CFC74C192F82F500265B92 /* LocationItemsWebViewController.m */,
 				27CFC72E192F81F300265B92 /* Images.xcassets */,
 				27CFC71A192F81F300265B92 /* Supporting Files */,
 			);
@@ -155,6 +167,14 @@
 				27CFC73E192F81F300265B92 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		27CFC752192FA31700265B92 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				27CFC750192FA30F00265B92 /* Nana-Mizuki-LINKAGE-lyrics.jpg */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +254,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27CFC751192FA30F00265B92 /* Nana-Mizuki-LINKAGE-lyrics.jpg in Resources */,
 				27CFC72F192F81F300265B92 /* Images.xcassets in Resources */,
 				27CFC71E192F81F300265B92 /* InfoPlist.strings in Resources */,
 				27CFC727192F81F300265B92 /* Main.storyboard in Resources */,
@@ -258,6 +279,7 @@
 				27CFC724192F81F300265B92 /* LocationItemsAppDelegate.m in Sources */,
 				27CFC72A192F81F300265B92 /* LocationItemsMainViewController.m in Sources */,
 				27CFC72D192F81F300265B92 /* LocationItemsFlipsideViewController.m in Sources */,
+				27CFC74D192F82F500265B92 /* LocationItemsWebViewController.m in Sources */,
 				27CFC720192F81F300265B92 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

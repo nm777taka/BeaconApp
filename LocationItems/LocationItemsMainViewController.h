@@ -7,7 +7,9 @@
 //
 
 #import "LocationItemsFlipsideViewController.h"
+#import <CoreBluetooth/CoreBluetooth.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface LocationItemsMainViewController : UIViewController <LocationItemsFlipsideViewControllerDelegate>
+@interface LocationItemsMainViewController : UIViewController <LocationItemsFlipsideViewControllerDelegate,CBPeripheralDelegate,UITextFieldDelegate>
 
 @end
