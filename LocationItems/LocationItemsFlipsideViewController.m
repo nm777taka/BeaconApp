@@ -42,7 +42,8 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
-    _uuid = [[NSUUID alloc]initWithUUIDString:@"70D06A13-BC48-4D9A-80EE-4CB9E656F2DA"];
+    _uuid = [[NSUUID alloc]initWithUUIDString:@"3ACE8EC3-4F0E-4857-B2D8-18550DFDE39A"];
+    //_uuid = [[NSUUID alloc]initWithUUIDBytes:0x3ACE8EC34F0E4857B2D818550DFDE39A];
     _region = [[CLBeaconRegion alloc]initWithProximityUUID:_uuid identifier:[_uuid UUIDString]];
     _locationManager = [[CLLocationManager alloc]init];
     _locationManager.delegate = self;
@@ -89,6 +90,12 @@
     [_beacons removeAllObjects];
     [_beacons addObjectsFromArray:beacons];
     
+    //Beaconが取得できてない..?
+    NSLog(@"beacons %@",beacons);
+    
+    
+    NSLog(@"検出");
+    
     //キャリブレーション
     if (_calibInProgress) {
         if (beacons.count == 1) {
@@ -110,14 +117,14 @@
     int immediateCount = 0;
     int nearCount = 0;
     for (CLBeacon *beacon in _beacons) {
-        if (beacon.proximity == CLProximityNear) {
-            //immediateCount++;
-            nearCount++;
+        if (beacon.proximity == CLProximityImmediate) {
+            immediateCount++;
+            //nearCount++;
             [self openWebPageMajor:beacon.major minor:beacon.minor];
         }
     }
     
-    if (nearCount == 0) {
+    if (immediateCount == 0) {
         [self closeWebPage];
     }
 }
@@ -162,6 +169,8 @@
     
     [self updateCell:cell atIndexPath:indexPath];
     
+    NSLog(@"cell for index");
+    
     return cell;
 }
 
@@ -190,15 +199,14 @@
     
     //キャリブレーションパート
     if (_calibInProgress) {
-        NSLog(@"はいったくぁああああ");
         if (_calibCounter > 0) {
-            NSLog(@"ここはだめえええええええ");
             cell.textLabel.text = [NSString stringWithFormat:@"Calibration %d",_calibCounter];
         } else {
             cell.textLabel.text = [NSString stringWithFormat:@"Measured Power %d",_measuredPower];
         }
     } else {
         cell.textLabel.text = [beacon.proximityUUID UUIDString];
+        NSLog(@"入った");
     }
     
     cell.detailTextLabel.text = [NSString stringWithFormat:@"Major:%@ , Minor:%@, Prox:%@ Acc: %.2fm RSSI:%d",
