@@ -8,6 +8,7 @@
 
 #import "LocationItemsFlipsideViewController.h"
 #import "LocationItemsWebViewController.h"
+#import "LIBeacon.h"
 
 #define CALIB_MAX 30
 
@@ -15,6 +16,7 @@
 @interface LocationItemsFlipsideViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *calibButton;
+@property LIBeacon *beacon;
 
 @end
 
@@ -42,7 +44,9 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
-    _uuid = [[NSUUID alloc]initWithUUIDString:@"3ACE8EC3-4F0E-4857-B2D8-18550DFDE39A"];
+    self.beacon = [LIBeacon sharedManager];
+    
+    _uuid = [[NSUUID alloc]initWithUUIDString:@"B9407F30-F5F8-466E-AFF9-25556B57FE6D"];
     //_uuid = [[NSUUID alloc]initWithUUIDBytes:0x3ACE8EC34F0E4857B2D818550DFDE39A];
     _region = [[CLBeaconRegion alloc]initWithProximityUUID:_uuid identifier:[_uuid UUIDString]];
     _locationManager = [[CLLocationManager alloc]init];

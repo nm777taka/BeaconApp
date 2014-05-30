@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F09556D1938756A0020205C /* LIBeacon.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F09556C1938756A0020205C /* LIBeacon.m */; };
+		0F09557019388ADE0020205C /* LIBeaconRegion.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F09556F19388ADE0020205C /* LIBeaconRegion.m */; };
 		27CFC714192F81F300265B92 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27CFC713192F81F300265B92 /* Foundation.framework */; };
 		27CFC716192F81F300265B92 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27CFC715192F81F300265B92 /* CoreGraphics.framework */; };
 		27CFC718192F81F300265B92 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27CFC717192F81F300265B92 /* UIKit.framework */; };
@@ -38,6 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F09556B1938756A0020205C /* LIBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIBeacon.h; sourceTree = "<group>"; };
+		0F09556C1938756A0020205C /* LIBeacon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIBeacon.m; sourceTree = "<group>"; };
+		0F09556E19388ADE0020205C /* LIBeaconRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LIBeaconRegion.h; sourceTree = "<group>"; };
+		0F09556F19388ADE0020205C /* LIBeaconRegion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LIBeaconRegion.m; sourceTree = "<group>"; };
 		27CFC710192F81F300265B92 /* LocationItems.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocationItems.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27CFC713192F81F300265B92 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		27CFC715192F81F300265B92 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -134,6 +140,10 @@
 				27CFC72C192F81F300265B92 /* LocationItemsFlipsideViewController.m */,
 				27CFC74B192F82F500265B92 /* LocationItemsWebViewController.h */,
 				27CFC74C192F82F500265B92 /* LocationItemsWebViewController.m */,
+				0F09556B1938756A0020205C /* LIBeacon.h */,
+				0F09556C1938756A0020205C /* LIBeacon.m */,
+				0F09556E19388ADE0020205C /* LIBeaconRegion.h */,
+				0F09556F19388ADE0020205C /* LIBeaconRegion.m */,
 				27CFC72E192F81F300265B92 /* Images.xcassets */,
 				27CFC71A192F81F300265B92 /* Supporting Files */,
 			);
@@ -276,11 +286,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F09556D1938756A0020205C /* LIBeacon.m in Sources */,
 				27CFC724192F81F300265B92 /* LocationItemsAppDelegate.m in Sources */,
 				27CFC72A192F81F300265B92 /* LocationItemsMainViewController.m in Sources */,
 				27CFC72D192F81F300265B92 /* LocationItemsFlipsideViewController.m in Sources */,
 				27CFC74D192F82F500265B92 /* LocationItemsWebViewController.m in Sources */,
 				27CFC720192F81F300265B92 /* main.m in Sources */,
+				0F09557019388ADE0020205C /* LIBeaconRegion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,6 +497,7 @@
 				27CFC747192F81F400265B92 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		27CFC748192F81F400265B92 /* Build configuration list for PBXNativeTarget "LocationItemsTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +506,7 @@
 				27CFC74A192F81F400265B92 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
